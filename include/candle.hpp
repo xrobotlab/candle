@@ -374,8 +374,10 @@ class Candle
 
 	bool inUpdateMode();
 
+public:
 	void updateMd80State(mab::Md80& drive);
 
+private:
 	std::shared_ptr<Bus> makeBus(mab::BusType_E busType, std::string device);
 
 	bool executeCommand(uint16_t canId, Md80Reg_E reg, const char* failMsg, const char* successMsg);
